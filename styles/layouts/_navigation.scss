@@ -1,0 +1,203 @@
+.nav{
+    background: $primary-color;
+    font-family: "Manrope", sans-serif;
+    position: relative;
+    .logo{
+        display:block;
+        cursor: pointer;
+        @include sm{
+        display: none;
+        }
+    }
+
+    .logo2{
+        display:none;
+        cursor: pointer;
+        @include sm{
+        display: block;
+        }
+    }
+    nav{
+        @include flexSpaceCenter;
+        padding:$lg-font 0;
+        margin:0 $xxl-font5;
+        // position: relative;
+        border-bottom: 5px solid  $secondary-color;
+        @include xl{
+            margin:0 $xxl-font2;
+        }
+        @include lg{
+        margin:0 $md-font;
+        }
+        @include sm{
+         margin:0;
+         padding:$lg-font $sm-font;
+        }
+    }
+    .flex{
+    @include flexCenterCenter;
+    @include lg{
+        gap:1rem;
+    }
+    }
+    .hamburger{
+        color:$white-color;
+        font-size:$md-font;
+        cursor:pointer;
+        display: none;
+    @include lg{
+        display: block;
+    }
+    }
+    .links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:$lg-font;
+        @include lg{
+            display: none;
+        }
+    }
+    .links .page{
+        color: $secondary-color;
+        font-size:$sm-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .link{
+        color: $white-color;
+        font-size:$sm-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .link:hover{
+        color:$secondary-color;
+    }
+    .mobile__nav{
+        display:none;
+        gap:$sm-font;
+        padding:0 2rem;
+        @include lg{
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            height: 300px;
+           // makes menu span full height and width
+            width: 100%;
+            background-color: $white-color;
+            border-top: 1px solid black;
+        &.expanded{
+           display: flex; 
+           justify-content: center;
+           align-items: center;
+           padding-top: 3rem;
+           @include sp{
+            padding-top: 2rem;
+        }
+        }
+         .wrapper{
+            background: $fill-color;
+            @include flexCenterCenter;
+            flex-direction: column;
+            padding:3rem 0rem;
+            padding-bottom: 1rem;
+            border-radius: $xs-font;
+            position: relative;
+            width:200px;
+        @include sm{
+            padding:1.5rem 0rem;
+            width:100%
+        }
+        @include sp{
+            padding:1rem 0rem;
+            width:100%;
+        }
+        &__image{
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            top: -50px;
+            @include sp{
+            width: 150px;
+            height: 80px;
+            top: -30px;
+
+        }
+        }
+        &__parent{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top:0.5rem;
+            @include sp{
+            margin-top:1rem;
+   
+            }
+
+            p{
+                font-family: "Manrope", sans-serif;
+                color: $primary-color;
+                font-size: $md-font;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+                @include sm{
+                font-size:$sm-font;
+                }
+            }
+        }
+        &__child{
+        display: flex;
+        align-items: center;
+        gap:$sm-font;
+        p{
+        color: silver;
+        font-size: $sm-font;
+        }
+        .arrow{
+            color:$secondary-color;
+        }
+        }
+         }
+        }
+        @include sm{
+        height: calc(90vh - 70px);
+        // stacks the li tags vertically 
+        flex-direction: column;
+         &.expanded{
+        gap:4rem
+          }
+        }
+        @include sp{
+             &.expanded{
+            gap:0.8rem
+              }
+        }
+    }
+
+    .cart__parent{
+        position: relative;
+        cursor:pointer;
+        p{
+            color: $white-color;
+            font-size:$xxs-font;
+            position: absolute;
+            top:-15px;
+            background-color: $secondary-color;
+            border-radius: 50%;
+            right: -8px;
+            padding: 0.2rem;
+        }
+        .cart{
+            color: $white-color;
+            font-size:$md-font;
+            cursor:pointer;
+        }
+    }
+
+    
+}

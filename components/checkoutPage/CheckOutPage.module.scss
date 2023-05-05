@@ -1,0 +1,552 @@
+@import "../../styles/main.scss";
+
+.container {
+    font-family: "Manrope", sans-serif;
+    background-color: $fill-color;
+
+    &__parent {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem $xxl-font5;
+        width: 100%;
+
+        @include xl {
+            padding: 5rem $xxl-font2
+        }
+
+        @include lg {
+            padding: 2rem 1.5rem;
+        }
+
+        @include sm {
+            padding: $sm-font ;
+        }
+    }
+
+    &__back {
+        color: $gray-color;
+        font-weight: 400;
+        font-size: $sm-font;
+        padding: $md-font 0rem;
+
+        @include sm {
+            padding: $extra-font 0rem;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: $md-font;
+
+        @include lg {
+            grid-template-columns: 1fr;
+        }
+
+        .content__head {
+            display: flex;
+            flex-direction: column;
+            background-color: $white-color;
+            padding: $xxl-font $xl-font;
+            border-radius: 8px;
+
+            @include sm {
+                padding: $sm-font;
+            }
+
+            h1 {
+                font-size: $extra-font2;
+                font-weight: 700;
+                color: $primary-color;
+                padding-bottom: $md-font;
+                font-family: "Manrope", sans-serif;
+
+                @include sm {
+                    padding-bottom: $sm-font;
+                }
+            }
+
+            .head__one {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: $xs-font;
+                padding-bottom: $lg-font;
+
+                @include sm {
+                    padding-bottom: $sm-font;
+                }
+
+                h2 {
+                    font-size: $xxs-font;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    font-family: "Manrope", sans-serif;
+                }
+
+                h3 {
+                    font-size: $vs-font;
+                    font-weight: 700;
+                    color: $primary-color;
+                    font-family: "Manrope", sans-serif;
+                    margin: $xs-font 0rem;
+                }
+
+                input {
+                    border-radius: 8px;
+                    border: 1px solid #cfcfcf;
+                    padding: $sm-font;
+                    width: 49%;
+                    font-family: "Manrope", sans-serif;
+                    outline: none;
+
+                    @include sm {
+                        width: 100%;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $secondary-color;
+                    }
+                }
+
+                .head__child {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-family: "Manrope", sans-serif;
+                    gap: $md-font;
+
+                    @include sm {
+                        flex-direction: column;
+                        gap: $xs-font;
+                    }
+
+                    label {
+                        width: 100%;
+                    }
+
+                    input {
+                        border-radius: 8px;
+                        border: 1px solid #cfcfcf;
+                        padding: $sm-font;
+                        width: 100%;
+                        font-family: "Manrope", sans-serif;
+                        outline: none;
+
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $secondary-color;
+                        }
+                    }
+                }
+            }
+
+            .head__two {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: $xs-font;
+                padding-bottom: $lg-font;
+
+                @include sm {
+                    padding-bottom: $sm-font;
+                }
+
+                h2 {
+                    font-size: $xxs-font;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    font-family: "Manrope", sans-serif;
+                }
+
+                h3 {
+                    font-size: $vs-font;
+                    font-weight: 700;
+                    color: $primary-color;
+                    font-family: "Manrope", sans-serif;
+                    margin: $xs-font 0rem;
+                }
+
+                input {
+                    border-radius: 8px;
+                    border: 1px solid #cfcfcf;
+                    padding: $sm-font;
+                    width: 49%;
+                    font-family: "Manrope", sans-serif;
+                    outline: none;
+
+                    @include sm {
+                        flex-direction: column;
+                        width: 100%;
+
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $secondary-color;
+                    }
+
+                    &.width__100 {
+                        width: 100%;
+                    }
+
+                }
+
+                .head__child {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-family: "Manrope", sans-serif;
+                    gap: $md-font;
+
+                    @include sm {
+                        flex-direction: column;
+                        gap: $sm-font;
+                    }
+
+                    label {
+                        width: 100%;
+                    }
+
+                    input {
+                        border-radius: 8px;
+                        border: 1px solid #cfcfcf;
+                        padding: $sm-font;
+                        width: 100%;
+                        font-family: "Manrope", sans-serif;
+                        outline: none;
+
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $secondary-color;
+                        }
+                    }
+                }
+            }
+
+            .head__three {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: $xs-font;
+
+
+                h2 {
+                    font-size: $xxs-font;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    font-family: "Manrope", sans-serif;
+                }
+
+                h3 {
+                    font-size: $vs-font;
+                    font-weight: 700;
+                    color: $primary-color;
+                    font-family: "Manrope", sans-serif;
+                    margin: $xs-font 0rem;
+                }
+
+                .payment {
+                    display: flex;
+                    justify-content: right;
+                    flex-direction: column;
+                    gap: $xs-font;
+                    align-items: flex-end;
+
+                    @include sm {
+                        align-items: flex-start;
+                        gap: $sm-font;
+                    }
+
+
+                    &__one,
+                    &__two {
+                        display: flex;
+                        padding: $xs-font;
+                        width: 49%;
+                        border-radius: 8px;
+                        border: 1px solid #cfcfcf;
+                        align-items: center;
+
+                        @include sm {
+                            width: 100%
+                        }
+
+
+                        &.active {
+                            border: 1px solid $secondary-color;
+
+                            .round {
+                                .circle {
+                                    width: 0.7rem;
+                                    height: 0.7rem;
+                                    border-radius: 50%;
+                                    background-color: $secondary-color;
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .round {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            border-radius: 50%;
+                            border: 1px solid #cfcfcf;
+                            margin-right: $xs-font;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .circle {
+                                display: none;
+
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+
+
+            }
+
+            .head__child {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-family: "Manrope", sans-serif;
+                gap: $md-font;
+                padding-top: $extra-font2;
+
+                @include sm {
+                    padding-top: $xxs-font;
+                    gap: $xs-font;
+                }
+
+                @include sm {
+                    flex-direction: column;
+                }
+
+                label {
+                    width: 100%;
+
+                    h3 {
+                        font-size: $vs-font;
+                        font-weight: 700;
+                        color: $primary-color;
+                        font-family: "Manrope", sans-serif;
+                        margin: $xs-font 0rem;
+                    }
+                }
+
+                input {
+                    border-radius: 8px;
+                    border: 1px solid #cfcfcf;
+                    padding: $sm-font;
+                    width: 100%;
+                    font-family: "Manrope", sans-serif;
+                    outline: none;
+
+
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $secondary-color;
+                    }
+                }
+            }
+
+            .cash {
+                color: $gray-color;
+                font-family: "Manrope", sans-serif;
+                font-size: $sm-font;
+            }
+        }
+
+        .content__cart {
+            display: flex;
+            flex-direction: column;
+            background-color: $white-color;
+            padding: $lg-font;
+            border-radius: 8px;
+            height: fit-content;
+
+            @include sm {
+                padding: $sm-font;
+            }
+
+            .content__items {
+                display: flex;
+                flex-direction: column;
+                gap: $sm-font;
+
+                .content__item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    @include lg {
+                        gap: $xs-font;
+                    }
+
+                    .content__image {
+                        display: flex;
+                        align-items: center;
+                        gap: $sm-font;
+
+                        .card__image {
+                            display: block;
+
+                            * {
+                                max-height: 64px;
+                                max-width: 64px;
+                                border-radius: 8px;
+                            }
+
+                            @include lg {
+                                display: none;
+                            }
+
+                            @include sm {
+                                display: none;
+                            }
+                        }
+
+                        .card__image__tablet {
+                            display: none;
+
+                            @include lg {
+                                display: block;
+
+                                * {
+                                    max-height: 64px;
+                                    max-width: 64px;
+                                    border-radius: 8px;
+                                }
+                            }
+
+                            @include sm {
+                                display: none;
+                            }
+
+                        }
+
+                        .card__image__mobile {
+                            display: none;
+
+                            @include lg {
+                                display: none;
+                            }
+
+                            @include sm {
+                                display: block;
+                            }
+
+                            * {
+                                max-height: 64px;
+                                max-width: 64px;
+                                border-radius: 8px;
+                            }
+                        }
+
+                        .content__text {
+                            display: flex;
+                            flex-direction: column;
+
+                            h4 {
+                                color: $primary-color;
+                                font-family: "Manrope", sans-serif;
+                                font-size: $sm-font;
+                                font-weight: 700;
+                            }
+
+                            p {
+                                color: $gray-color;
+                                font-family: "Manrope", sans-serif;
+                                font-size: $xxs-font;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .cart__quantity {
+                        color: $gray-color;
+                        font-family: "Manrope", sans-serif;
+                        font-size: $sm-font;
+                        font-weight: 400;
+                    }
+
+
+                }
+            }
+
+            h1 {
+                font-size: $extra-font;
+                font-weight: 700;
+                color: $primary-color;
+                padding-bottom: $md-font;
+                font-family: "Manrope", sans-serif;
+
+            }
+
+            .flex,
+            .flex__total {
+                @include flexSpaceCenter;
+                padding: $xs-font 0rem;
+
+                h4 {
+                    font-size: $sm-font;
+                    font-family: "Manrope", sans-serif;
+                    color: $gray-color ;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: $sm-font;
+                    font-family: "Manrope", sans-serif;
+                    color: $primary-color;
+                    font-weight: 700;
+                }
+            }
+
+            .flex__total {
+                padding-top: $md-font;
+
+                p {
+                    color: $secondary-color;
+                    font-size: $extra-font;
+                }
+            }
+
+            button {
+                background-color: $secondary-color;
+                margin-top: $md-font;
+                padding: $xxs-font $extra-font2;
+                display: flex;
+                border: none;
+                justify-content: center;
+                cursor: pointer;
+                @include sm {
+                    padding: $xs-font $sm-font;
+                }
+
+                p {
+                    font-size: $sm-font;
+                    font-weight: 700;
+                    font-family: "Manrope", sans-serif;
+                    color: $white-color;
+                    letter-spacing: 0rem;
+                }
+            }
+
+            button:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+}

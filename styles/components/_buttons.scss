@@ -1,0 +1,39 @@
+.btn {
+    @include flexInlineCenter;
+    border-radius: 20px;
+    border: 1px solid $secondary-color;
+    color: $white-color;
+    padding: $xxs-font $xxs-font;
+    background-color: $primary-color;
+    text-transform: capitalize;
+    font-size: $sm-font;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn:hover,
+  .btn2:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn2 {
+    @include flexInlineCenter;
+    border-radius: 6px;
+    border: none;
+    color: $white-color;
+    padding: $xxs-font $xxs-font;
+    background-color: $secondary-color;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: $extra-font;
+    outline: none;
+    cursor: pointer;
+    margin-top: $sm-font;
+    transition: all 0.2s ease;
+  }
+  
+  .textarea {
+    width: 100%;
+  }
+  

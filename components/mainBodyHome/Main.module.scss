@@ -1,0 +1,484 @@
+@import "../../styles/main.scss";
+
+.body {
+    background-color: $white-color;
+
+    &__second {
+        background: url("../../public/pattern-circles.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        height: auto;
+        background-color: $secondary-color;
+        margin: 3rem $xxl-font5;
+        padding-top: 13rem;
+        border-radius: $xs-font;
+
+        @include xl {
+            margin: 0 $xxl-font2;
+        }
+
+        @include lg {
+            padding: $lg-font 0;
+            margin: 0 $lg-font;
+        }
+
+        @include sm {
+            margin: 0 $sm-font;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+
+            @include lg {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrapper__image {
+                width: 450px;
+                height: 450px;
+
+                @include lg {
+                    display: none;
+                }
+
+                @include sm {
+                    display: none;
+                }
+
+            }
+
+            .wrapper__image1 {
+                display: none;
+
+                @include lg {
+                    display: block;
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @include sm {
+                    display: none;
+
+                }
+            }
+
+            .wrapper__image2 {
+                display: none;
+
+                @include lg {
+                    display: none;
+                }
+
+                @include sm {
+                    display: block;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+
+            .parent {
+                display: flex;
+                flex-direction: column;
+                gap: $sm-font;
+
+                @include lg {
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                h3 {
+                    font-family: "Manrope", sans-serif;
+                    font-size: $xl-font;
+                    color: $white-color;
+                    font-weight: 400;
+                    width: 10ch;
+
+                    @include lg {
+                        text-align: center;
+                        font-size: $lg-font;
+                    }
+
+                    @include sm {
+                        text-align: center;
+                        font-size: $lg-font;
+                    }
+                }
+
+                :nth-child(2) {
+                    font-family: "Manrope", sans-serif;
+                    font-size: $sm-font;
+                    color: $white-color;
+                    font-weight: 400;
+                    width: 35ch;
+
+                    @include sm {
+                        font-size: $sm-font;
+                        width: auto;
+                        text-align: center;
+                    }
+                }
+
+                button {
+                    background-color: $primary-color2;
+                    margin-top: $md-font;
+                    padding: $xxs-font $extra-font2;
+                    display: flex;
+                    width: fit-content;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: transparent;
+
+                        p {
+                            color: $primary-color;
+                        }
+                    }
+
+                    p {
+                        font-size: $sm-font;
+                        font-weight: 700;
+                        font-family: "Manrope", sans-serif;
+                        color: $white-color;
+                        letter-spacing: 0rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__third {
+        background: url("../../public/image-speaker-zx7.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 13rem 4rem;
+        margin: $md-font $xxl-font5;
+        display: flex;
+        align-items: center;
+        border-radius: $xs-font;
+
+        @include xl {
+            margin: $md-font $xxl-font2;
+        }
+
+        @include lg {
+            background: url("../../public/image-speaker-tablet-zx7.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 7rem 3rem;
+            margin: $md-font $lg-font;
+        }
+
+        @include sm {
+            background: url("../../public/image-speaker-mobile-zx7.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 7rem 1rem;
+            margin: $md-font $sm-font;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-family: "Manrope", sans-serif;
+                font-size: $xl-font;
+                color: $primary-color;
+                font-weight: 400;
+
+                @include lg {
+                    font-size: $lg-font;
+                }
+
+                @include sm {
+                    font-size: $md-font;
+                }
+            }
+
+
+            button {
+                background-color: transparent;
+                margin-top: $md-font;
+                padding: $xxs-font $extra-font2;
+                display: flex;
+                width: fit-content;
+
+                &:hover {
+                    background-color: $primary-color;
+
+                    p {
+                        color: $white-color;
+                    }
+                }
+
+                @include sm {
+                    padding: $xs-font $sm-font;
+                }
+
+                p {
+                    font-size: $sm-font;
+                    font-weight: 700;
+                    font-family: "Manrope", sans-serif;
+                    color: $primary-color;
+                    letter-spacing: 0rem;
+                }
+            }
+
+        }
+    }
+
+    &__fourth {
+        margin: $xl-font $xxl-font5;
+        display: flex;
+
+        @include xl {
+            margin: $xl-font $xxl-font2;
+        }
+
+        @include lg {
+            margin: $xl-font $lg-font;
+        }
+
+        @include sm {
+            margin: $md-font $sm-font;
+        }
+
+        .container {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $extra-font2;
+            width: 100%;
+
+            @include lg {
+                gap: $xs-font;
+            }
+
+            @include sm {
+                display: flex;
+                flex-direction: column;
+                gap: $md-font;
+            }
+
+            .image {
+                background: url("../../public/earphones.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+                border-radius: $xs-font;
+
+                @include lg {
+                    background: url("../../public/earphonestab.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include sm {
+                    background: url("../../public/image-earphones-yx1.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                background: $fill-color;
+                padding: 10rem 3rem;
+                border-radius: $xs-font;
+
+                @include lg {
+                    width: 100%;
+                    padding: 2rem;
+                }
+
+                h3 {
+                    font-family: "Manrope", sans-serif;
+                    font-size: $xl-font;
+                    color: $primary-color;
+                    font-weight: 400;
+
+                    @include lg {
+                        font-size: $lg-font;
+                    }
+
+                    @include sm {
+                        font-size: $md-font;
+                    }
+                }
+
+                button {
+                    background-color: transparent;
+                    margin-top: $md-font;
+                    padding: $xxs-font $extra-font2;
+                    display: flex;
+                    width: fit-content;
+
+                    &:hover {
+                        background-color: $primary-color;
+
+                        p {
+                            color: $white-color;
+                        }
+                    }
+
+                    @include sm {
+                        padding: $xs-font $sm-font;
+                    }
+
+                    p {
+                        font-size: $sm-font;
+                        font-weight: 700;
+                        font-family: "Manrope", sans-serif;
+                        color: $primary-color;
+                        letter-spacing: 0rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &__fifth {
+        margin: $xxl-font3 $xxl-font5;
+        display: flex;
+        margin-bottom: 20rem;
+
+        @include xl {
+            margin: $xxl-font3 $xxl-font2;
+        }
+
+        @include lg {
+            margin: $xxl-font2 $lg-font;
+            margin-bottom: $xxl-font3;
+
+        }
+
+        @include sm {
+            margin: $xxl-font2 $sm-font;
+            margin-bottom: $xxl-font2;
+        }
+
+        .content {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $extra-font2;
+            width: 100%;
+
+            @include lg {
+                gap: $xs-font;
+                display: flex;
+                flex-direction: column;
+            }
+
+            @include sm {
+                display: flex;
+                flex-direction: column;
+                gap: $md-font;
+            }
+
+            .image {
+                background: url("../../public/gearimage.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 700px;
+                width: 100%;
+                border-radius: $xs-font;
+
+                @include lg {
+                    background: url("../../public/tabgear.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 300px;
+                    order: 1;
+
+                }
+
+                @include sm {
+                    background: url("../../public/mobilegear.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+
+                @include lg {
+                    order: 2
+                }
+
+                h3 {
+                    font-family: "Manrope", sans-serif;
+                    font-size: $xl-font;
+                    color: $primary-color;
+                    font-weight: 700;
+
+                    @include lg {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    @include sm {
+                        font-size: $md-font;
+
+                    }
+                }
+
+                .orange {
+                    color: $secondary-color;
+                }
+
+                p {
+                    font-family: "Manrope", sans-serif;
+                    font-size: $sm-font;
+                    color: $primary-color;
+                    font-weight: 500;
+                    margin-top: $xs-font;
+                    padding: 1rem;
+
+                    @include lg {
+                        padding: $extra-font2 $xxl-font2;
+                        text-align: center;
+                    }
+
+                    @include sm {
+                        padding: 0rem;
+                        text-align: auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+}

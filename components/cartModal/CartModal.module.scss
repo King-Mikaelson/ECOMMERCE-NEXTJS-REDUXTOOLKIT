@@ -1,0 +1,265 @@
+@import "../../styles/main.scss";
+
+.modal{
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    z-index:8;
+    width: 100%;
+
+    &__parent{
+        position: absolute;
+        top: $xxl-font5;
+        right: $xxl-font6;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background: $white-color;
+        flex-direction:column;
+        gap:$sm-font;
+        padding:$lg-font $xxl-font5;
+        border-radius:$xs-font;
+        
+        @include lg{
+            top: $xxl-font4;
+            right: 0;
+            left:0;
+            padding:$lg-font $xxl-font;
+            margin: 0 $xxl-font4;
+        }
+
+        @include sm{
+          top: $xxl-font3;
+          right: 0;
+          left:0;
+          padding:$md-font;
+          margin: 0 $md-font;
+      }
+     .cart__title{
+        font-family: "Manrope", sans-serif;
+        font-size: $sm-font;
+     }
+        .cart__empty{
+            font-size: $xxl-font3;
+
+            @include lg{
+                font-size: $xxl-font;
+            }
+
+            @include sm{
+                font-size: $xxl-font;
+            }
+        }
+    }
+
+    &__cart{
+        position: absolute;
+        top: $xxl-font5;
+        right: $xxl-font6;
+        display:flex;
+        flex-direction: column;
+        background: $white-color;
+        padding:$lg-font $extra-font2;
+        border-radius:$xs-font;
+        
+
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: $xxl-font3;
+        padding-bottom: $sm-font;
+
+        :nth-child(2){
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .content__items {
+        display: flex;
+        flex-direction: column;
+        gap: $sm-font;
+
+        .content__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include lg {
+                gap: $xs-font;
+            }
+
+            .content__image {
+                display: flex;
+                align-items: center;
+                gap: $sm-font;
+
+                .card__image {
+                    display: block;
+
+                    * {
+                        max-height: 64px;
+                        max-width: 64px;
+                        border-radius: 8px;
+                    }
+
+                    @include lg {
+                        display: none;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                .card__image__tablet {
+                    display: none;
+
+                    @include lg {
+                        display: block;
+
+                        * {
+                            max-height: 64px;
+                            max-width: 64px;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+
+                }
+
+                .card__image__mobile {
+                    display: none;
+
+                    @include lg {
+                        display: none;
+                    }
+
+                    @include sm {
+                        display: block;
+                    }
+
+                    * {
+                        max-height: 64px;
+                        max-width: 64px;
+                        border-radius: 8px;
+                    }
+                }
+
+                .content__text {
+                    display: flex;
+                    flex-direction: column;
+
+                    h4 {
+                        color: $primary-color;
+                        font-family: "Manrope", sans-serif;
+                        font-size: $sm-font;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        color: $gray-color;
+                        font-family: "Manrope", sans-serif;
+                        font-size: $xxs-font;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .cart__quantity {
+                color: $gray-color;
+                font-family: "Manrope", sans-serif;
+                font-size: $sm-font;
+                font-weight: 400;
+            }
+
+
+        }
+
+    }
+
+    .flex {
+        @include flexSpaceCenter;
+        padding: $xs-font 0rem;
+
+        h4 {
+            font-size: $sm-font;
+            font-family: "Manrope", sans-serif;
+            color: $gray-color ;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: $sm-font;
+            font-family: "Manrope", sans-serif;
+            color: $primary-color;
+            font-weight: 700;
+        }
+    }
+
+    button {
+        background-color: $secondary-color;
+        margin-top: $md-font;
+        padding: $xxs-font $extra-font2;
+        display: flex;
+        border: none;
+        justify-content: center;
+        cursor: pointer;
+
+        @include sm {
+            padding: $xs-font $sm-font;
+        }
+
+        .link{
+            font-size: $sm-font;
+            font-weight: 700;
+            font-family: "Manrope", sans-serif;
+            color: $white-color;
+            letter-spacing: 0rem;
+            cursor: pointer;
+
+        }
+    }
+
+    button:hover {
+        background-color: $primary-color;
+    }
+
+    .range{
+        @include flexSpaceCenter;
+        background-color: $fill-color;
+        padding: 0.2rem;
+        gap: $extra-font;
+         @include lg{
+        gap: 0.5rem;
+        padding: $xxs-font $sm-font;
+         }
+         @include sm{
+            padding: $xs-font $sm-font;
+        }
+        &__plus, &__minus{
+        font-size: $sm-font;
+        color:$gray-color;
+        cursor: pointer;
+        &:hover{
+            color: $secondary-color;
+        }
+        }
+         &__text{
+         font-size: $sm-font;
+         color: $primary-color;
+         font-family: "Manrope", sans-serif;
+        text-align: center;          
+    }
+        }
+    }
+
+
+}

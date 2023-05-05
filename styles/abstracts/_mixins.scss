@@ -1,0 +1,36 @@
+@mixin fixedPosition {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  @mixin flexCenterCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexInlineCenter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexSpaceCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin flexSpaceAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  @mixin grayHoverPointer {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  

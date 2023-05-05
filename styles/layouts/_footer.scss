@@ -1,0 +1,130 @@
+.footer{
+display: flex;
+background-color: $primary-color2;
+padding-top: $xl-font;
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .footer__first{
+    @include flexSpaceCenter;
+    padding:$md-font 0;
+    margin:0 $xxl-font5;
+    @include xl{
+     margin:0 $xxl-font2;
+    }
+    @include lg{
+        margin:0 $md-font;
+        }
+        @include sm{
+        flex-direction: column;
+         margin:0;
+         padding:$sm-font $extra-font2;
+         gap:$md-font;
+        }
+    .links{
+        @include flexCenterCenter;
+        gap:$lg-font;
+     @include md{
+        gap: $xs-font;
+     }
+     @include sm{
+    flex-direction:column;
+    gap: $md-font;
+     }
+    }
+    .link{
+        color: $white-color;
+        font-size:$sm-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .link:hover{
+        color:$secondary-color;
+    }
+    }
+
+    .footer__second{
+        @include flexSpaceCenter;
+        padding:$md-font 0;
+        margin:0 $xxl-font5;
+        @include xl{
+            margin:0 $xxl-font2;
+           }
+        @include lg{
+            margin:0 $md-font;
+            }
+            @include sm{
+            flex-direction: column;
+             margin:0;
+             padding:$sm-font $xs-font;
+            }
+    p{
+        width: 58ch;
+        font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        font-size: $sm-font;
+        color: #cbd5e1;
+    @include sm{
+    width: 100%;
+    font-size: $xxs-font;
+
+    }
+    }
+    .socials{
+        display: flex;
+        gap:$sm-font;
+        .icon{
+            color: $white-color;
+            font-size: $md-font;
+            cursor: pointer;
+        }
+     @include lg{
+    display:none
+     }
+    }
+     }
+     .footer__third{
+    display: flex;
+    justify-content: flex-start;
+    padding:$md-font 0;
+     margin:0 $xxl-font5;
+     @include xl{
+        margin:0 $xxl-font2;
+       }
+     @include lg{
+        @include flexSpaceCenter;
+        margin:0 $md-font;
+        }
+    @include sm{
+        flex-direction: column;
+         margin:0;
+         padding:$sm-font $extra-font2;
+         gap:$md-font;
+
+    }
+    p{
+        font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        font-size: $sm-font;
+        color: #cbd5e1; 
+    }
+
+    .socials{
+        display:none;
+        .icon{
+            color: $white-color;
+            font-size: $md-font;
+            cursor: pointer;
+        }
+     @include lg{
+    display:flex;
+    gap:$sm-font;
+     }
+    }
+     }
+
+  }
+}

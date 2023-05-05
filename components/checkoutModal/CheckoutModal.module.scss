@@ -1,0 +1,278 @@
+@import "../../styles/main.scss";
+
+
+.checkout__modal{
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    z-index:8;
+    width: 100%;
+
+    &__parent{
+        position: absolute;
+        top:20%;
+        left: 32%;
+        right: 32%;
+        background-color: $white-color;
+        display:flex;
+        justify-content: center;
+        background: $white-color;
+        flex-direction:column;
+        gap:$sm-font;
+        padding:$extra-font2;
+        border-radius:$xs-font;
+        margin: 0 auto;
+        
+        @include lg{
+            top: 10%;
+            right: 0;
+            left:0;
+            margin: 0 $xxl-font4;
+        }
+
+        @include sm{
+          top: 0;
+          right: 0;
+          left:0;
+          padding:$xs-font;
+          margin: 0 $md-font;
+          gap:$xs-font;
+          display:flex;
+        justify-content: center;
+      }
+     .cart__title{
+        font-family: "Manrope", sans-serif;
+        font-size: $sm-font;
+     }
+
+     .checkout__modal__header{
+        display: flex;
+        flex-direction: column;
+        gap:$md-font;
+        padding-bottom: $md-font;
+
+        @include sm{
+            gap:$xs-font;
+            padding-bottom: 0rem;
+        }
+        .cart__icon{
+            color: $secondary-color;
+            font-size: 5rem;
+
+        @include sm{
+            font-size: 3rem;
+        }
+        }
+        h2{
+            font-family: "Manrope", sans-serif;
+            font-size: $md-font;
+            font-weight:700;
+            color:$primary-color;
+            width: 15ch;
+        }
+        p{
+            font-family: "Manrope", sans-serif;
+            font-size: $sm-font;
+            font-weight:500;
+            color:$gray-color; 
+        }
+     }
+
+     .checkout__modal__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+
+        @include md{
+            grid-template-columns: 1fr;
+        }
+
+        .content__parent{
+            height: 9rem;
+            display: flex;
+            flex-direction: column;
+            background-color: #f1f1f1;
+            justify-content: center;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            
+            @include sm{
+                height: auto;
+                padding:$md-font $sm-font;
+
+  
+            }
+
+            .content__item {
+                display: flex;
+                justify-content: space-between;
+                background-color: #f1f1f1;
+                padding:0rem $sm-font;
+                align-items: center;
+    
+        
+                @include lg {
+                    gap: $xs-font;
+                }
+        
+                .content__image {
+                    display: flex;
+                    gap: $sm-font;
+                    align-items: center;
+        
+                    .card__image {
+                        display: block;
+        
+                        * {
+                            max-height: 64px;
+                            max-width: 64px;
+                            border-radius: 8px;
+                        }
+        
+                        @include lg {
+                            display: none;
+                        }
+        
+                        @include sm {
+                            display: none;
+                        }
+                    }
+        
+                    .card__image__tablet {
+                        display: none;
+        
+                        @include lg {
+                            display: block;
+        
+                            * {
+                                max-height: 64px;
+                                max-width: 64px;
+                                border-radius: 8px;
+                            }
+                        }
+        
+                        @include sm {
+                            display: none;
+                        }
+        
+                    }
+        
+                    .card__image__mobile {
+                        display: none;
+        
+                        @include lg {
+                            display: none;
+                        }
+        
+                        @include sm {
+                            display: block;
+                        }
+        
+                        * {
+                            max-height: 64px;
+                            max-width: 64px;
+                            border-radius: 8px;
+                        }
+                    }
+        
+                    .content__text {
+                        display: flex;
+                        flex-direction: column;
+        
+                        h4 {
+                            color: $primary-color;
+                            font-family: "Manrope", sans-serif;
+                            font-size: $sm-font;
+                            font-weight: 700;
+                        }
+        
+                        p {
+                            color: $gray-color;
+                            font-family: "Manrope", sans-serif;
+                            font-size: $xxs-font;
+                            font-weight: 400;
+                        }
+                    }
+                }
+        
+                .cart__quantity {
+                    color: $gray-color;
+                    font-family: "Manrope", sans-serif;
+                    font-size: $sm-font;
+                    font-weight: 400;
+              
+                }
+        
+        
+            }
+            .content__items{
+                border-top: 1px solid #cfcfcf;
+                text-align: center;
+                padding-top: $xs-font;
+
+            }
+        }
+
+
+        .total{
+            background-color: $primary-color;
+            padding:$xs-font $sm-font;
+            color: $gray-color;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:$sm-font;
+
+            @include sm{
+                height: auto;
+                padding:$md-font $sm-font;
+  
+            }
+            h4{
+                font-family: "Manrope", sans-serif;
+                font-size: $sm-font;
+            }
+            p{
+                font-family: "Manrope", sans-serif;
+                font-size: $sm-font;
+                color: $white-color;
+            }
+        }
+     }
+
+
+    button {
+        background-color: $secondary-color;
+        margin-top: $md-font;
+        padding: $xxs-font $extra-font2;
+        display: flex;
+        border: none;
+        justify-content: center;
+        cursor: pointer;
+        @include sm {
+            padding: $xs-font $sm-font;
+            margin-top: 0rem;
+        }
+
+        p {
+            font-size: $sm-font;
+            font-weight: 700;
+            font-family: "Manrope", sans-serif;
+            color: $white-color;
+            letter-spacing: 0rem;
+        }
+    }
+
+    button:hover {
+        background-color: $primary-color;
+    }
+    }
+}

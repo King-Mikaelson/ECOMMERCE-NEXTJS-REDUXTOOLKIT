@@ -1,0 +1,139 @@
+@import "../../styles/main.scss";
+
+
+.body__first {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 12rem 0rem;
+    margin: 0 $xxl-font5;
+    // background-color: red;
+    gap: $sm-font;
+
+    @include xl {
+        margin: 0 $xxl-font2;
+    }
+
+    @include lg {
+        margin: 0 $lg-font;
+        padding: $xxl-font 0rem;
+        padding-bottom: $xl-font;
+        gap: $sm-font;
+    }
+
+    @include sm {
+        display: grid;
+        flex-direction: column;
+        gap: $xl-font;
+        grid-template-columns: 1fr;
+        margin: 0 $sm-font;
+    }
+
+    .wrapper {
+        background: $fill-color;
+        @include flexCenterCenter;
+        flex-direction: column;
+        padding: $xxl-font2 $sm-font;
+        padding-bottom: $sm-font;
+        border-radius: $xs-font;
+        position: relative;
+
+        // width:500px;
+        // margin: $sm-font;
+        @include xl {
+            padding: $xl-font $md-font;
+        }
+
+        @include lg {
+            padding: $xl-font $md-font;
+            margin: 0;
+        }
+
+        @include sm {
+            padding: $md-font 0rem;
+            width: 100%
+        }
+
+        @include sp {
+            padding: 1rem 0rem;
+            width: 100%;
+        }
+
+        &__image {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: -90px;
+
+            @include lg {
+                width: 150px;
+                height: 80px;
+                top: -30px;
+            }
+
+            @include sp {
+                width: 150px;
+                height: 80px;
+                top: -30px;
+
+            }
+        }
+
+        &__parent {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: $xs-font;
+            justify-content: center;
+
+            @include sm {
+                padding: $xs-font;
+                justify-content:flex-start;
+            }
+
+            @include sp {
+                margin-top: $extra-font2;
+
+            }
+
+            p {
+                font-family: "Manrope", sans-serif;
+                color: $primary-color;
+                font-size: $md-font;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                @include sm {
+                    font-size: $sm-font;
+                }
+            }
+        }
+
+        &__child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: $xxs-font;
+            padding-top: $sm-font;
+
+            @include sm {
+                padding: $xs-font;
+            }
+
+            p {
+                color: silver;
+                font-size: $sm-font;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+            .arrow {
+                color: $secondary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import "../../styles/main.scss";
+
+.header{
+font-family: "Manrope", sans-serif;
+background: url("../../public/image-hero.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 90vh;
+display: flex;
+align-items: center;
+@include lg{
+background-image: url("../../public/image-header-tablet.jpg"); 
+justify-content: center;
+}
+@include sm{
+background-image: url("../../public/image-header.jpg");
+}
+    .parent{
+    display: flex;
+    flex-direction: column;
+    gap:$sm-font;
+    margin-bottom: auto;
+    padding:$lg-font 0;
+    margin:0 $xxl-font5;
+    
+    @include xl{ 
+      margin:0 $xxl-font2;
+   }
+    @include lg{ 
+    margin-top:$xxl-font2;
+    }
+     :nth-child(1){
+        font-family: "Manrope", sans-serif;
+        font-size: $md-font;
+      color: grey;
+        font-weight: 400;
+        letter-spacing: $xxs-font;
+     @include lg{
+        font-size: $extra-font;
+        text-align: center;
+        font-weight: 700;
+     }
+     @include sm{
+        font-size: $xxs-font;
+        letter-spacing: $xs-font;
+     }
+     }
+     :nth-child(2){
+        font-family: "Manrope", sans-serif;
+        font-size: $xxl-font;
+        color: $white-color;
+        font-weight: 400;
+        width: 10ch;
+        @include lg{
+            font-size: $xxl-font;
+            text-align: center;
+            width: auto;
+
+         }
+
+         @include sm{
+            font-size: $xl-font;
+         }
+     }
+     :nth-child(3){
+        font-family: "Manrope", sans-serif;
+        font-size: $sm-font;
+        color: grey;
+        font-weight: 400;
+        width: 40ch;
+        @include lg{
+            text-align: center;
+            width: auto;
+
+         }
+     }
+     :nth-child(4){
+        background-color: $secondary-color;
+        padding: $xxs-font $extra-font2;
+        display: flex;
+        width: fit-content;
+        margin-top: $md-font;
+        cursor: pointer;
+
+    @include lg{
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    p{
+        font-size: $sm-font;
+        font-weight: 700;
+        font-family: "Manrope", sans-serif;
+        color: $white-color;
+        letter-spacing: 0rem;
+        cursor: pointer;
+    }
+     }
+    }
+}

@@ -1,0 +1,111 @@
+@import "../../styles/main.scss";
+
+.body__fifth{
+    margin:0 $xxl-font5;
+    display: flex;
+    margin-bottom: $xxl-font4;
+
+    @include xl{
+        margin:$xxl-font3 $xxl-font2;
+    }
+
+    @include lg{
+        margin:$xxl-font $lg-font;
+    }
+
+    @include sm{
+        margin:$xxl-font $sm-font;
+    }
+
+    .content{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap:$extra-font2;
+        width: 100%;
+    
+        @include lg{
+        gap:$xs-font;
+        display: flex;
+        flex-direction: column;
+        }
+    
+        @include sm{
+         display: flex;
+         flex-direction: column;
+         gap:$md-font;
+        } 
+
+        .image{
+            background: url("../../public/gearimage.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;  
+            height: 700px;
+            width:  100%;
+            border-radius: $xs-font; 
+         @include lg{
+            background: url("../../public/tabgear.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+            width: 100%;
+            height: 300px;
+            order: 1; 
+
+         }
+    
+         @include sm{
+            background: url("../../public/mobilegear.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+            width: 100%;
+            height: 200px;
+         }
+        }
+
+        .text{
+        display: flex;
+        flex-direction: column;
+         @include lg{
+            order:2
+         }
+         h3{
+            font-family: "Manrope", sans-serif;
+            font-size: $xl-font;
+            color: $primary-color;
+            font-weight: 700;
+            @include lg{
+                width: 100%;
+                text-align: center;
+            }
+            @include sm{
+            font-size: $md-font;
+    
+            }
+         }
+         .orange{
+            color: $secondary-color;
+         }
+         p{
+            font-family: "Manrope", sans-serif;
+            font-size: $sm-font;
+            color: $gray-color;
+            font-weight: 500;
+            margin-top: $xs-font;
+            padding: $sm-font 0;
+            @include lg{
+                padding:$extra-font2 $xxl-font2;
+                text-align: center;
+            }
+            @include sm{
+                padding:0rem;
+                text-align: auto;
+            }
+
+         }
+        }
+    }
+  }
