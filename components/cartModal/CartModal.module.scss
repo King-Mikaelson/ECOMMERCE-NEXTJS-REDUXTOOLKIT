@@ -74,10 +74,9 @@
         }
 
         @include sm{
-          top: 0;
+          top: 10%;
           right: 0;
           left:0;
-          bottom: 0;
           padding:$xs-font;
           margin: 0 $md-font;
           gap:$xs-font;
