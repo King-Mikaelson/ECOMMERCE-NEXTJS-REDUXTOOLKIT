@@ -74,6 +74,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 0.5rem;
+
             @include lg{
                 display: none;
             }
@@ -219,6 +220,9 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-content: space-between;
+        gap:$xl-font;
+
+
         @include lg{
             grid-template-columns: repeat(1, 1fr);
         }
@@ -256,6 +260,11 @@
         justify-content: center;
         align-items: center;
         border-radius: 0.5rem;
+
+        @include xl{
+            width: 298px;
+            height: 302px;
+        }
         @include lg{
             display: none;
         }
